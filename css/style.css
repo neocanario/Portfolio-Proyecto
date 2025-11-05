@@ -8,10 +8,10 @@
 
 :root {
     /* COLORS */
-    --primary-color: rgb(135, 67, 245);
-    --secondary-color: rgb(198, 173, 238);
-    --accent-color: rgb(0, 250, 217);
-    --bg-color: rgb(49, 48, 48);
+    --primary-color: #d78fee;
+    --secondary-color: #B97DEE;
+    --accent-color: #4e56c0;
+    --bg-color: #fdcffa;
     --text-color: #ffffff;
     
     /* NAV */
@@ -138,7 +138,7 @@ body {
 
 .hero-section {
     width: 100%;
-    min-height: 60vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -434,7 +434,7 @@ body {
 
 footer {
     width: 100%;
-    background-color: var(--nav-bg);
+    background-color: var(--primary-color);
     margin-top: 2rem;
 }
 
