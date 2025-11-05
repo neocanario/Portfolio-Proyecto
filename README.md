@@ -1,73 +1,74 @@
-# Portfolio Personal - Joel Sánchez
+# Personal Portfolio - Joel Sánchez
 
-## Descripción
+## Description
 
-Portfolio personal desarrollado como proyecto del módulo de Desarrollo Web. 
-Sitio web responsive que muestra mi experiencia como Desarrollador Full Stack, 
-incluyendo mis habilidades, proyectos y formas de contacto.
+Personal portfolio developed as a project for the Web Development module.
+Responsive website showcasing my experience as a Full Stack Developer,
+including my skills, projects, and contact information.
 
-## Características
+## Features
 
-- ✨ Diseño responsive (mobile, tablet, desktop)
-- 🎨 Paleta de colores moderna (morado y cyan)
-- 📱 Menú hamburguesa funcional para dispositivos móviles
-- 🖼️ Galería de tecnologías con efectos hover
-- 🔗 Enlaces a redes sociales y contacto
+- ✨ Responsive design (mobile, tablet, desktop)
+- 🎨 Modern color palette (purple and cyan)
+- 📱 Functional hamburger menu for mobile devices
+- 🖼️ Technology gallery with hover effects
+- 🔗 Social media and contact links
 
-## Tecnologías Utilizadas
+## Technologies Used
 
 - HTML5
-- CSS3 (con Media Queries)
+- CSS3 (with Media Queries)
 - JavaScript (Vanilla)
-- Font Awesome (iconos)
+- Font Awesome (icons)
 
-## Inspiración del Diseño
+## Design Inspiration
 
-El diseño de este proyecto está inspirado en:
+The design of this project is inspired by:
 https://dribbble.com/shots/25478108-Puzzle-Fintech-Website-Design-Case-Study
 
-## Estructura del Proyecto
+## Project Structure
 ```
 portfolio/
 │
 ├── index.html
 ├── pages/
 │   └── proyects.html
+│   └── contact.html
 ├── css/
 │   └── style.css
 ├── js/
 │   └── script.js
 ├── img/
-│   └── (imágenes del proyecto)
+│   └── (project images)
 └── README.md
 ```
 
-## Instalación y Uso
+## Installation and Usage
 
-1. Clona este repositorio:
+1. Clone this repository:
 ```bash
    git clone https://github.com/neocanario/Portfolio-Proyecto.git
 ```
 
-2. Abre el archivo `index.html` en tu navegador
+2. Open the `index.html` file in your browser
 
-No se requieren dependencias adicionales ni instalación de paquetes.
+No additional dependencies or package installation required.
 
-## Características Responsive
+## Responsive Features
 
-El sitio se adapta a tres breakpoints principales:
+The site adapts to three main breakpoints:
 
 - 📱 **Mobile**: < 768px
 - 📱 **Tablet**: 768px - 1024px
 - 💻 **Desktop**: > 1024px
 
-## Agradecimientos
+## Acknowledgments
 
-- A mis compañeros de clase por su apoyo y feedback
-- A los recursos de Dribbble por la inspiración del diseño
-- A la comunidad de desarrolladores por las mejores prácticas compartidas
+- To my classmates for their support and feedback
+- To Dribbble resources for design inspiration
+- To the developer community for shared best practices
 
-## Autor
+## Author
 
 **Joel Sánchez**
 - GitHub: [@neocanario](https://github.com/neocanario)
@@ -76,4 +77,4 @@ El sitio se adapta a tres breakpoints principales:
 
 ---
 
-© 2025 Joel Sánchez. Proyecto educativo - Desarrollo Web.
+© 2025 Joel Sánchez. Educational Project - Web Development.
