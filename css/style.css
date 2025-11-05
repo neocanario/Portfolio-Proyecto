@@ -62,7 +62,7 @@ body {
     padding: 0 var(--spacing-sm);
 }
 
-/* HEADER Y NAV */
+/* HEADER AND NAV */
 
 #main-container-up {
     display: flex;
@@ -205,7 +205,7 @@ body {
     justify-content: space-between;
 }
 
-/* SOCIAL MEDIA Y CONTACT */
+/* SOCIAL MEDIA AND CONTACT */
 
 .social-section {
     margin-top: var(--spacing-lg);
@@ -537,7 +537,7 @@ footer {
         display: flex;
     }
 
-    /* CPrincipal Container */
+    /* Principal Container */
     #main-container {
         padding: var(--spacing-md);
         padding-bottom: var(--spacing-lg);
