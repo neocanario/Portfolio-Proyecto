@@ -143,7 +143,10 @@ body {
     align-items: center;
     justify-content: center;
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, var(--bg-color) 0%, rgba(135, 67, 245, 0.2) 100%);
+    background-image: url('../img/fondo-diseno-abstracto-rosa-purpura.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .hero-section .main-container-middle {
@@ -451,6 +454,9 @@ footer {
 /* MEDIA QUERIES - TABLET*/
 
 @media (max-width: 1024px) {
+    .hero-section{
+        min-height: 100vh;
+    }
     .main-container-middle {
         width: 70vw;
         height: 25vh;
