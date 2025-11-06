@@ -500,7 +500,8 @@ footer {
 
     /* Hero */
     .hero-section {
-        min-height: 50vh;
+        
+        min-height: 88vh;
         padding: 3rem 1rem;
     }
 
@@ -513,10 +514,7 @@ footer {
     }
 
     /* Header and nav */
-    header {
-        margin-bottom: var(--spacing-xl);
-    }
-
+    
     #main-container-up {
         flex-direction: column;
         text-align: center;
