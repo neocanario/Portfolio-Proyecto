@@ -24,6 +24,7 @@
         <nav class="main-nav" id="main-nav">
           <a href="../index.html">Home</a>
           <a href="proyects.html">Projects</a>
+          <a href="#" class="active">Contact</a>
         </nav>
       </div>
     </div>
@@ -41,8 +42,8 @@
       <div class="error-message" id="errorMessage">
         Por favor, completa todos los campos requeridos.
       </div>
-
-      <form id="contactForm">
+      <!-- Aqui va todo el custionario -->
+      <form id="contactForm" action="">
         <div class="form-group required">
           <label for="name">Nombre</label>
           <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
@@ -65,7 +66,7 @@
 
         <div class="form-group required">
           <label for="message">Mensaje</label>
-          <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+          <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto..." required></textarea> 
         </div>
 
         <button type="submit" class="submit-btn">
