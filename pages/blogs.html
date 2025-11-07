@@ -1,61 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Proyectos - En Mantenimiento</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    
-    <style>
-        body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #1a0033;
-        color: #e0f7fa;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        text-align: center;
-        padding: 1rem;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos - En Mantenimiento</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/blog.css" />
+  
 
-        .maintenance {
-        max-width: 500px;
-        }
+</head>
 
-        h1 {
-        color: #bb86fc;
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        }
+<body>
+  <header id="main-container-up">
+    <div id="main-container-up-left">
+      <img src="../img/SD-logo.png" alt="Joel Sánchez" />
+      <h2>Joel Sánchez</h2>
+    </div>
 
-        p {
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
-        color: #b0bec5;
-        }
+    <nav id="main-nav" class="main-nav">
+      <a href="../index.html">Inicio</a>
+      <a href="#" class="active">Blog</a>
+      <a href="./contact.html">Contacto</a>
+    </nav>
+    <button id="nav-toggle">☰</button>
+  </header>
+  <section class="blog-section">
+    <h2>Blog</h2>
 
-        a {
-        color: #00bcd4;
-        text-decoration: none;
-        font-weight: bold;
-        }
+    <form id="add-blog-form">
+      <label for="blog-title">Título:</label>
+      <input type="text" id="blog-title" name="blog-title" required>
 
-        a:hover {
-        text-decoration: underline;
-        }
-    </style>
+      <label for="blog-content">Contenido:</label>
+      <textarea id="blog-content" name="blog-content" rows="4" required></textarea>
 
-    </head>
+      <button type="submit">Añadir entrada</button>
+    </form>
 
-    <body>
+    <div id="blog-list"></div>
+  </section>
+  <script src="../js/script.js"></script>
+  <script src="../js/blog.js"></script>
 
-        <div class="maintenance">
-            <h1>En Mantenimiento</h1>
-            <p>La sección de proyectos está en desarrollo.<br>Volveré pronto con más contenido.</p>
-            <p><a href="../index.html">← Volver al inicio</a></p>
-        </div>
+</body>
 
-    </body>
 </html>
