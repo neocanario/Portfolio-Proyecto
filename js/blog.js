@@ -4,18 +4,22 @@ let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
 // --- Mostrar todos los blogs en pantalla ---
 function showBlogs() {
     const blogList = document.getElementById("blog-list");
-  if (!blogList) return; // seguridad por si el elemento no existe
+    if (!blogList) return; // seguridad por si el elemento no existe
 
     let html = "";
 
     for (let i = 0; i < blogs.length; i++) {
-    html += `
-        <article class="blog-post">
-        <h3>${blogs[i].title}</h3>
-        <small>${blogs[i].date}</small>
-        <p>${blogs[i].content}</p>
-        </article>
-    `;
+        html += `
+            <article class="blog-post" data-index="${i}">
+                <h3>${blogs[i].title}</h3>
+                <small>${blogs[i].date}</small>
+                <p>${blogs[i].content}</p>
+                <div class="blog-actions">
+                    <button class="btn-edit" onclick="editBlog(${i})"> Editar</button>
+                    <button class="btn-delete" onclick="deleteBlog(${i})"> Eliminar</button>
+                </div>
+            </article>
+        `;
     }
 
     blogList.innerHTML = html;
@@ -49,6 +53,38 @@ function listenToEvents() {
     showBlogs();
     event.target.reset(); // limpia formulario
     });
+}
+
+// --- Eliminar un blog ---
+function deleteBlog(index) {
+    if (confirm("¿Estás seguro de que quieres eliminar este blog?")) {
+        blogs.splice(index, 1);
+        localStorage.setItem("blogs", JSON.stringify(blogs));
+        showBlogs();
+    }
+}
+
+// --- Editar un blog ---
+function editBlog(index) {
+    const blog = blogs[index];
+    
+    const newTitle = prompt("Editar título:", blog.title);
+    if (newTitle === null) return; // cancelado
+    
+    const newContent = prompt("Editar contenido:", blog.content);
+    if (newContent === null) return; // cancelado
+    
+    if (newTitle.trim() === "" || newContent.trim() === "") {
+        alert("Por favor, rellena todos los campos.");
+        return;
+    }
+    
+    blogs[index].title = newTitle.trim();
+    blogs[index].content = newContent.trim();
+    blogs[index].date = new Date().toLocaleDateString() + " (editado)";
+    
+    localStorage.setItem("blogs", JSON.stringify(blogs));
+    showBlogs();
 }
 
 // --- Inicializar ---
