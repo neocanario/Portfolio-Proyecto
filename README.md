@@ -74,7 +74,7 @@ The site adapts to three main breakpoints:
 - GitHub: [@neocanario](https://github.com/neocanario)
 - Instagram: [@dgwc.24](https://www.instagram.com/dgwc.24/)
 - Email: joelsanchezdiaz@alumno.ieselricon.es
-- Live-Web: https://neocanario.github.io/Portfolio-Proyecto/
+- Web: https://portfolio.joelsanchez.net/
 
 ---
 
