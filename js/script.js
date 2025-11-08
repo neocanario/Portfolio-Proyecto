@@ -24,3 +24,15 @@ if (NAV_TOGGLE && MAIN_NAV) {
     }
   });
 }
+
+const HERO_SECTION = document.querySelector(".hero-section");
+if (HERO_SECTION) {
+  window.addEventListener("scroll", () => {
+    const SCROLL_POSITION = window.pageYOffset;
+    const Parallax_SPEED = 0.5;
+    
+    if (window.innerWidth > 768) {
+      HERO_SECTION.style.backgroundPositionY = `${SCROLL_POSITION * Parallax_SPEED}px`;
+    }
+  });
+}

@@ -1,6 +1,3 @@
-/* Usa las mismas variables globales del estilo principal */
-@import url('../css/style.css');
-
 /* CONTENEDOR PRINCIPAL DEL BLOG */
 .blog-section {
     max-width: 900px;
