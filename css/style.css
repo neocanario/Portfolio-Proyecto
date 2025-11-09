@@ -482,6 +482,55 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.carousel {
+    margin: var(--spacing-xl) auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: var(--secondary-color);
+    border-radius: 18px;
+    padding: var(--spacing-lg);
+    display: flex;
+    overflow-x: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.group-carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    animation: spin 12s infinite linear;
+    padding-right: var(--spacing-md);
+}
+
+.card-carousel {
+    flex: 0 0 9em;
+    height: 9em;
+    padding: var(--spacing-md);
+    background-color: var(--primary-color);
+    border-radius: 18px;
+    text-align: center;
+    align-content: center;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.card-carousel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: var(--accent-color);
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+
 /* FOOTER */
 
 footer {
@@ -597,11 +646,6 @@ footer {
     }
 
     /* Header and nav */
-    
-    #main-container-up {
-        flex-direction: column;
-        text-align: center;
-    }
 
     #nav-toggle {
         display: block;
