@@ -1,9 +1,9 @@
 function listenToEvents() {
-    const contactForm = document.getElementById("contactForm");
-    const errorMessage = document.getElementById("errorMessage");
+    const CONTACT_FORM = document.getElementById("contactForm");
+    const ERROR_MESSAGE = document.getElementById("errorMessage");
 
-    if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
+    if (CONTACT_FORM) {
+        CONTACT_FORM.addEventListener("submit", function (e) {
             e.preventDefault();
 
             const name = document.getElementById("name").value.trim();
@@ -11,11 +11,11 @@ function listenToEvents() {
             const message = document.getElementById("message").value.trim();
 
             if (name === "" || email === "" || message === "") {
-                errorMessage.style.display = "block";
+                ERROR_MESSAGE.style.display = "block";
             } else {
-                errorMessage.style.display = "none";
+                ERROR_MESSAGE.style.display = "none";
                 alert("Gracias por contactarme, te responderé pronto.");
-                contactForm.reset();
+                CONTACT_FORM.reset();
             }
         });
     }

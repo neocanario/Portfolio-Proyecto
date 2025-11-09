@@ -3,8 +3,8 @@ let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
 
 // --- Mostrar todos los blogs en pantalla ---
 function showBlogs() {
-    const blogList = document.getElementById("blog-list");
-    if (!blogList) return; // seguridad por si el elemento no existe
+    const BLOG_LIST = document.getElementById("blog-list");
+    if (!BLOG_LIST) return; // seguridad por si el elemento no existe
 
     let html = "";
 
@@ -22,15 +22,15 @@ function showBlogs() {
         `;
     }
 
-    blogList.innerHTML = html;
+    BLOG_LIST.innerHTML = html;
 }
 
 // --- Escuchar el formulario para añadir nuevo blog ---
 function listenToEvents() {
-    const addBlogForm = document.getElementById("add-blog-form");
-    if (!addBlogForm) return;
+    const ADD_BLOG_FORM = document.getElementById("add-blog-form");
+    if (!ADD_BLOG_FORM) return;
 
-    addBlogForm.addEventListener("submit", (event) => {
+    ADD_BLOG_FORM.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const title = event.target["blog-title"].value.trim();
@@ -41,13 +41,13 @@ function listenToEvents() {
         return;
     }
 
-    const newBlog = {
+    const NEW_BLOG = {
         title: title,
         content: content,
         date: new Date().toLocaleDateString(),
     };
 
-    blogs.push(newBlog);
+    blogs.push(NEW_BLOG);
     localStorage.setItem("blogs", JSON.stringify(blogs));
 
     showBlogs();
@@ -68,19 +68,19 @@ function deleteBlog(index) {
 function editBlog(index) {
     const blog = blogs[index];
     
-    const newTitle = prompt("Editar título:", blog.title);
-    if (newTitle === null) return; // cancelado
+    const NEW_TITLE = prompt("Editar título:", blog.title);
+    if (NEW_TITLE === null) return; // cancelado
     
-    const newContent = prompt("Editar contenido:", blog.content);
-    if (newContent === null) return; // cancelado
+    const NEW_CONTENT = prompt("Editar contenido:", blog.content);
+    if (NEW_CONTENT === null) return; // cancelado
     
-    if (newTitle.trim() === "" || newContent.trim() === "") {
+    if (NEW_TITLE.trim() === "" || NEW_CONTENT.trim() === "") {
         alert("Por favor, rellena todos los campos.");
         return;
     }
     
-    blogs[index].title = newTitle.trim();
-    blogs[index].content = newContent.trim();
+    blogs[index].title = NEW_TITLE.trim();
+    blogs[index].content = NEW_CONTENT.trim();
     blogs[index].date = new Date().toLocaleDateString() + " (editado)";
     
     localStorage.setItem("blogs", JSON.stringify(blogs));
