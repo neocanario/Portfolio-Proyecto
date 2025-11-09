@@ -1,10 +1,10 @@
-// --- Cargar los blogs desde localStorage o iniciar vacío ---
+// --- Load blogs from localStorage or start empty ---
 let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
 
-// --- Mostrar todos los blogs en pantalla ---
+// --- Show all blogs on screen ---
 function showBlogs() {
   const BLOG_LIST = document.getElementById("blog-list");
-  if (!BLOG_LIST) return; // seguridad por si el elemento no existe
+  if (!BLOG_LIST) return; // safety check in case the element does not exist
 
   let html = "";
 
@@ -25,7 +25,7 @@ function showBlogs() {
   BLOG_LIST.innerHTML = html;
 }
 
-// --- Escuchar el formulario para añadir nuevo blog ---
+// --- Listen to the form to add a new blog ---
 function listenToEvents() {
   const ADD_BLOG_FORM = document.getElementById("add-blog-form");
   if (!ADD_BLOG_FORM) return;
@@ -51,11 +51,11 @@ function listenToEvents() {
     localStorage.setItem("blogs", JSON.stringify(blogs));
 
     showBlogs();
-    event.target.reset(); // limpia formulario
+    event.target.reset(); // clear form
   });
 }
 
-// --- Eliminar un blog ---
+// --- DELETE BLOG ---
 function deleteBlog(index) {
   if (confirm("¿Estás seguro de que quieres eliminar este blog?")) {
     blogs.splice(index, 1);
@@ -64,7 +64,7 @@ function deleteBlog(index) {
   }
 }
 
-// --- Editar un blog ---
+// --- EDIT BLOG ---
 function editBlog(index) {
   const blog = blogs[index];
 

@@ -1,4 +1,4 @@
-/* CONTENEDOR PRINCIPAL DEL BLOG */
+/* PRINCIPAL CONTAINER FOR THE BLOG */
 .blog-section {
   max-width: 900px;
   margin: var(--spacing-xl) auto;
