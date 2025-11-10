@@ -27,19 +27,24 @@ if (NAV_TOGGLE && MAIN_NAV) {
 
 const SKY = document.getElementById('sky');
 const DUNES = document.getElementById('dunes');
-const DUNES_PARALLAX_SPEED = 0.5;
+const HERO_SECTION = document.querySelector('.hero-section');
 
 let ticking = false;
 
-function updateDunesParallax() {
+function updateParallax() {
   const scrolled = window.pageYOffset;
-  const windowHeight = window.innerHeight;
+  const heroHeight = HERO_SECTION ? HERO_SECTION.offsetHeight : window.innerHeight;
   
-  // Solo aplicar parallax en la sección hero
-  if (scrolled < windowHeight * 0.93) {
-    // Dunas - se mueven hacia arriba con el scroll
-    const dunesMove = (scrolled * DUNES_PARALLAX_SPEED);
-    DUNES.style.transform = `translateY(${dunesMove}px)`;
+  // Solo aplicar parallax mientras estamos en la sección hero
+  if (scrolled < heroHeight) {
+    // Sky permanece fijo (sin movimiento)
+    // No aplicamos transform al sky
+    
+    // Dunes se mueven más rápido (primer plano)
+    if (DUNES) {
+      const dunesMove = scrolled * 0.6;
+      DUNES.style.transform = `translateY(${dunesMove}px)`;
+    }
   }
   
   ticking = false;
@@ -47,8 +52,11 @@ function updateDunesParallax() {
 
 // Event listener optimizado con requestAnimationFrame
 window.addEventListener('scroll', () => {
-  if (!ticking && DUNES) {
-    window.requestAnimationFrame(updateDunesParallax);
+  if (!ticking) {
+    window.requestAnimationFrame(updateParallax);
     ticking = true;
   }
 });
+
+// Ejecutar una vez al cargar para posición inicial
+updateParallax();
