@@ -4,261 +4,316 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/ico" href="img/ghost.ico">
-  
-  <!-- Preload parallax images for instant display -->
-  <link rel="preload" as="image" href="img/sky-fondo.jpeg">
-  <link rel="preload" as="image" href="img/photo-fondo.png">
-  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <!--Design inspiration: https://dribbble.com/shots/25478108-Puzzle-Fintech-Website-Design-Case-Study-->
   <title>Portfolio</title>
 </head>
 
 <body>
-  <header>
-    <div id="main-container-up">
-      <div id="main-container-up-left">
-        <img src="img/ghost.ico" alt="Usuario">
-        
-        <p>Joel Sánchez</p>
-      </div>
-      <div id="main-container-up-right">
-        <!-- Hamburger button -->
-        <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-          ☰
+  <div class="container">
+    <div class="main-header">
+      <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
-
-        <nav class="main-nav" id="main-nav">
-          <a href="#" class="active">Home</a>
-          <a href="pages/blogs.html">Blogs</a>
-          <a href="pages/contact.html">Contact</a>
-          <a href="cv.pdf " download="cv">CV</a>
-
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <!-- Presentation Section -->
-  <section class="hero-section">
-    <div class="parallax-container">
-      <div class="parallax-block">
-        <div class="sky" id="sky"></div>
-        <div class="dunes" id="dunes"></div>
-      </div>
-    </div>
-    
-    <div class="main-container-middle">
-      <div class="title">
-        <h1>Buenas soy Joel <br> Desarrollador Full Stack</h1>
-        <p>Tecnico en desarrollo de aplicaciones, paginas web y administrador de sistemas. 
-          Me especializo en el mantenimiento de servidores y desarrollo de aplicaciones web y de escritorio.
-        </p>
-      </div>
-    </div>
-  </section>
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-link"><a href="#about">Sobre Mi</a></li>
+          <li class="nav-link"><a href="#projects">Projects</a></li>
+          <li class="nav-link"><a href="#contacto">Contactos</a></li>
+        </ul>
+      </nav>
   
-  <div id="main-container">
-    <!-- Experience and Education Section -->
-    <section class="container-section">
-      <h2 class="section-title">Mi Trayectoria</h2>
-      <div class="cards-container">
-        <div class="card">
-          <h3 class="card-title">Experiencia Profesional</h3>
-          <p>He estado 3 meses trabajando como miembro de IT en la empresa Anovo Iberia en Madrid y desarrollando
-            proyectos propios. 
-            <br>
-            <br>
-            Durante ese periodo de tiempo donde estuve de practicas lo que hize más a menudo
-            fue solucionar problemas técnicos, inventario y revision de procesos del CPD.</p>
-        </div>
 
-        <div class="card">
-          <h3 class="card-title">Educación</h3>
-          <p>Formación continua en desarrollo web y desarrollo multiplataforma. <br>  <br>Especialización en arquitecturas
-            modernas.</p>
+      <div class="content">
+        <div class="main">
+          <h2>Buenas👋, <br> Soy Joel</h2>
+          <p>Desarrollador Web Full Stack</p>
+          <a href="cv.pdf" download="CV_Joel_Sanchez.pdf" class="btn">Descargar CV</a>
         </div>
-        <div class="card">
-          <h3 class="card-title">Certificados</h3>
+        
+      </div>
+    </div>
+
+      <section class="section-one" id="about">
+        <h2>Perfil profesional</h2>
+        <div class="block">
+          <h3><i class="fas fa-user"></i> Sobre mí</h3>
+          <p>Soy estudiante de primer año del ciclo superior
+            de Desarrollo de Aplicaciones Multiplataforma (DAM),
+            con una sólida base técnica gracias al ciclo medio
+            de Sistemas Microinformáticos y Redes (SMR)
+            que completé anteriormente.</p>
+        </div>
+        <div class="block">
+          <h3><i class="fas fa-briefcase"></i> Experiencia</h3>
+          <h4>Miembro de IT - Anovo Iberia Madrid</h4>
+          <p><strong>Duración:</strong> 3 meses (Prácticas)</p>
+
+          <p>Soporte técnico de hardware y software, gestión de inventario de equipos,
+            mantenimiento del CPD y administración de sistemas Windows. Participé en la
+            migración de más de 50 estaciones de trabajo y reduje el tiempo de resolución
+            de incidencias en un 20%.</p>
+
+          <p><strong>Tecnologías:</strong> Windows Server, Active Directory, sistemas
+            de ticketing y monitoreo.</p>
+
+          <hr>
+
+          <h4>Proyectos Personales</h4>
+          <p>Desarrollo continuo de aplicaciones web con HTML, CSS, JavaScript, Three.js
+            y consumo de APIs REST.</p>
+        </div>
+        <div class="block">
+          <h3><i class="fas fa-graduation-cap"></i> Educación</h3>
+          <p>Mis educaciones se basan en dos certificaciones un titulo
+            de grado medio y un titulo de ingles: </p>
           <ul>
-            <li>Certificacion Introduccion a Python - Mastermind </li>
-            <li>Certificación de Personalización de Linux - Hack4u</li>
+            <li>Grado Medio de Sistemas Microinformáticos y Redes</li>
+            <li>Certificación B1 First de Cambridge</li>
+            <li>Certificación personalización de Linux</li>
+            <li>Certificación Introducción de Python</li>
           </ul>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Skills Section -->
-    <section class="container-section skills-section">
-      <h2 class="section-title">Habilidades Técnicas</h2>
-      <div class="skills-container">
-        <div class="skill-category">
-          <h3 class="card-title">Frontend</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Responsive Design</span>
-            <span class="skill-tag">Accesibilidad Web</span>
+      <section class="section-two">
+        <h2>Servicios</h2>
+        <div class="block">
+          <h3><i class="fas fa-laptop-code"></i> Desarrollo Web Frontend</h3>
+          <p>Creación de experiencias web modernas, intuitivas y completamente responsivas.
+            Me especializo en construir interfaces de usuario que no solo sean visualmente
+            atractivas, sino también funcionales y optimizadas para todos los dispositivos.
+            Utilizo HTML5 semántico, CSS3 con técnicas avanzadas como Flexbox y Grid, y
+            JavaScript vanilla para garantizar rendimiento óptimo. Cada proyecto incluye
+            animaciones fluidas, navegación intuitiva y diseño mobile-first que se adapta
+            perfectamente desde smartphones hasta pantallas de escritorio.</p>
+        </div>
+        <div class="block">
+          <h3><i class="fas fa-server"></i> Desarrollo Backend & APIs</h3>
+          <p>Desarrollo de soluciones backend robustas y escalables utilizando Java y Python.
+            Creo APIs RESTful bien estructuradas, implemento bases de datos relacionales con
+            MySQL optimizadas para rendimiento, y diseño arquitecturas de servidor que priorizan
+            la seguridad y la eficiencia. Experiencia en Node.js para aplicaciones en tiempo real
+            y en la integración de servicios de terceros. Mis soluciones backend están diseñadas
+            pensando en la escalabilidad futura y el mantenimiento a largo plazo.</p>
+        </div>
+        <div class="block">
+          <h3><i class="fas fa-cogs"></i> DevOps & Administración de Sistemas</h3>
+          <p>Implementación de prácticas DevOps modernas para optimizar el ciclo de desarrollo
+            y despliegue. Experiencia práctica en administración de sistemas Linux, gestión de
+            servidores, y configuración de entornos Docker para containerización de aplicaciones.
+            Implemento pipelines CI/CD para automatizar testing y despliegue, gestiono infraestructura
+            cloud, y realizo monitoreo de sistemas para garantizar disponibilidad 24/7. Mi enfoque
+            combina desarrollo ágil con operaciones eficientes para entregar productos de calidad
+            de forma continua.</p>
+        </div>
+      </section>
+
+      <section class="section-three" id="projects">
+        <h2>Proyectos Destacados</h2>
+
+        <div class="block">
+          <h3><i class="fas fa-globe"></i> Animación de la Tierra en 3D</h3>
+          <p>Proyecto de visualización interactiva que demuestra el poder de las tecnologías
+            web modernas sin frameworks pesados. Utilizando exclusivamente Three.js y JavaScript
+            vanilla, desarrollé una representación 3D completamente interactiva de la Tierra que
+            los usuarios pueden rotar, hacer zoom y explorar en tiempo real.</p>
+
+          <h4>Características técnicas:</h4>
+          <ul>
+            <li>Renderizado 3D optimizado con WebGL a través de Three.js</li>
+            <li>Texturas de alta resolución con mapas de normales para realismo</li>
+            <li>Controles de cámara intuitivos con capacidad de zoom y rotación orbital</li>
+            <li>Animación fluida a 60 FPS con optimización de rendimiento</li>
+            <li>Iluminación dinámica que simula la posición solar</li>
+            <li>Código limpio y modular sin dependencias de frameworks</li>
+          </ul>
+
+          <p><strong>Desafíos superados:</strong> El principal reto fue lograr un rendimiento
+            fluido sin React u otros frameworks, optimizando el rendering loop y la gestión de
+            memoria. Implementé técnicas de lazy loading para las texturas y optimización de
+            geometrías para mantener la experiencia responsive incluso en dispositivos con
+            recursos limitados.</p>
+
+          <a href="https://github.com/neocanario/Earth-animation-3D.git" target="_blank">
+            Ver proyecto en GitHub
+          </a>
+        </div>
+        <div class="block">
+          <h3><i class="fas fa-tasks"></i> Aplicación To-Do Moderna</h3>
+          <p>Gestor de tareas inteligente y minimalista construido con tecnologías web
+            fundamentales. Esta aplicación va más allá de una simple lista de tareas, ofreciendo
+            una experiencia de usuario pulida con persistencia de datos local y una interfaz
+            intuitiva.</p>
+
+          <h4>Características principales:</h4>
+          <ul>
+            <li>Interfaz limpia y responsive que funciona perfectamente en cualquier dispositivo</li>
+            <li>Sistema de persistencia usando LocalStorage para mantener las tareas entre sesiones</li>
+            <li>Funcionalidades CRUD completas: crear, leer, actualizar y eliminar tareas</li>
+            <li>Filtrado dinámico de tareas (todas, pendientes, completadas)</li>
+            <li>Animaciones CSS suaves para feedback visual</li>
+            <li>Sistema de prioridades con codificación por colores</li>
+            <li>Contador de tareas pendientes en tiempo real</li>
+            <li>Modo de edición inline para modificación rápida</li>
+          </ul>
+
+          <p><strong>Aspectos técnicos destacados:</strong> Implementé un sistema de gestión
+            de estado en vanilla JavaScript que maneja todas las operaciones de forma eficiente.
+            La aplicación utiliza event delegation para optimizar el rendimiento con listas largas,
+            y LocalStorage está encapsulado en funciones reutilizables con manejo de errores robusto.</p>
+
+          <a href="https://github.com/neocanario/To-Do.git" target="_blank">
+            Ver proyecto en GitHub
+          </a>
+        </div>
+        <div class="block">
+          <h3><i class="fas fa-cloud-sun"></i> Weather App - Aplicación Meteorológica</h3>
+          <p>Aplicación web dinámica que proporciona información meteorológica en tiempo real
+            utilizando APIs externas. Este proyecto combina consumo de APIs, diseño responsive
+            y manejo asíncrono de datos para ofrecer predicciones precisas de manera visual y
+            accesible.</p>
+
+          <h4>Funcionalidades implementadas:</h4>
+          <ul>
+            <li>Búsqueda de ciudades con autocompletado inteligente</li>
+            <li>Datos meteorológicos en tiempo real de múltiples fuentes</li>
+            <li>Pronóstico extendido de 7 días con gráficos visuales</li>
+            <li>Visualización de datos detallados: temperatura, humedad, viento, presión</li>
+            <li>Geolocalización automática para clima local</li>
+            <li>Conversión entre sistemas métrico e imperial</li>
+            <li>Iconos dinámicos que reflejan las condiciones actuales</li>
+            <li>Backgrounds animados que cambian según el clima</li>
+          </ul>
+
+          <h4>Stack tecnológico:</h4>
+          <ul>
+            <li>JavaScript ES6+ con async/await para llamadas a APIs</li>
+            <li>Fetch API para peticiones HTTP asíncronas</li>
+            <li>Integración con OpenWeatherMap API</li>
+            <li>CSS3 con custom properties para tematización</li>
+            <li>Responsive design con mobile-first approach</li>
+          </ul>
+
+          <p><strong>Desafíos técnicos resueltos:</strong> Implementé un sistema de caché
+            inteligente para reducir llamadas innecesarias a la API y mejorar la velocidad de
+            respuesta. Además, desarrollé un robusto manejo de errores para situaciones como
+            falta de conexión, ciudades no encontradas, o límites de API excedidos, garantizando
+            que la aplicación siempre proporcione feedback claro al usuario.</p>
+
+          <a href="https://github.com/neocanario/Weather.git" target="_blank">
+            Ver proyecto en GitHub
+          </a>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <h2>Tegnologías</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="img/css-logo.png" alt="Imagen 1">
+          </div>
+          <div class="gallery-item">
+            <img src="img/logo-html.png" alt="Imagen 2">
+          </div>
+          <div class="gallery-item">
+            <img src="img/js-logo.png" alt="Imagen 3">
+          </div>
+          <div class="gallery-item">
+            <img src="img/java-logo-transparent-free-png-3781508657.png" alt="Imagen 4">
+          </div>
+          <div class="gallery-item">
+            <img src="img/python-logo-452175197.png" alt="Imagen 5">
+          </div>
+          <div class="gallery-item">
+            <img src="img/mysql-logo.png" alt="Imagen 6">
+          </div>
+          <div class="gallery-item">
+            <img src="img/github-logo.png" alt="Imagen 7">
+          </div>
+          <div class="gallery-item">
+            <img src="img/linux-logo.png" alt="Imagen 8">
+          </div>
+          <div class="gallery-item">
+            <img src="img/microsoft-logo-transparent-free-png-4090301237.png" alt="Imagen 9">
+          </div>
+          <div class="gallery-item">
+            <img src="img/docker-logo.png" alt="Imagen 10">
           </div>
         </div>
+      </section>
 
-        <div class="skill-category">
-          <h3 class="card-title">Backend</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">SQL/MySQL</span>
-            <span class="skill-tag">API REST</span>
-            <span class="skill-tag">Node.js</span>
+      <section class="contact" id="contacto">
+        <h2>Contacto</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Información de Contacto</h3>
+            <p><strong>Email:</strong> joelchdz24@gmail.com</p>
+            <p><strong>Ubicación:</strong> Las Palmas de Gran Canaria, España</p>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" id="nombre" placeholder="Nombre">
+                <span class="error-message" id="nombreError"></span>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" placeholder="Email">
+                <span class="error-message" id="emailError"></span>
+              </div>
+              <div class="form-group">
+                <textarea id="mensaje" placeholder="Mensaje" rows="5"></textarea>
+                <span class="error-message" id="mensajeError"></span>
+              </div>
+              <button type="submit">Enviar Mensaje</button>
+            </form>
           </div>
         </div>
-
-        <div class="skill-category">
-          <h3 class="card-title">DevOps & Herramientas</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Linux</span>
-            <span class="skill-tag">Git/GitHub</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">CI/CD</span>
-            <span class="skill-tag">Cloud Services</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Service Section -->
-    <section class="container-section">
-      <h2 class="section-title">Servicios</h2>
-      <div class="cards-container">
-        <div class="card">
-          <h3 class="card-title">Desarrollo Web</h3>
-          <p>Creación de sitios web modernos y responsivos utilizando las últimas tecnologías y frameworks.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 class="card-title">Backend</h3>
-          <p>Desarrollo de APIs robustas y sistemas escalables para aplicaciones empresariales.</p>
-        </div>
-
-        <div class="card">
-          <h3 class="card-title">DevOps</h3>
-          <p>Implementación de CI/CD y gestión de infraestructura en la nube para optimizar el desarrollo.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Proyects Section -->
-    <section class="container-section">
-      <h2 class="section-title">Proyectos Destacados</h2>
-      <div class="cards-container">
-        <div class="card">
-          <h3 class="card-title">Animacion de la Tierra</h3>
-          <p>Animacion de la tierra en 3D sin usar React solo usando la libreria Three.js para la animacion</p>
-          <a href="https://github.com/neocanario/Earth-animation-3D.git" target="_blank" rel="noopener" style="display: inline-block; margin-top: 10px; color: #667eea; text-decoration: none; font-weight: 600;">
-            <i class="fab fa-github"></i> Ver en GitHub
-          </a>
-          <img src="/img/tierra-animation.png">
-        </div>
-
-        <div class="card">
-          <h3 class="card-title">To-Do</h3>
-          <p>Desarrollo de una aplicación web para gestionar tareas pendientes, utilizando HTML, CSS y JavaScript.</p>
-          <a href="https://github.com/neocanario/To-Do.git" target="_blank" rel="noopener" style="display: inline-block; margin-top: 10px; color: #667eea; text-decoration: none; font-weight: 600;">
-            <i class="fab fa-github"></i> Ver en GitHub
-          </a>
-          <img src="/img/to-do.png">
-        </div>
-
-        <div class="card">
-          <h3 class="card-title">Weather app</h3>
-          <p>Creacion de una aplicación para consultar el clima utilizando APIs públicas y tecnologías web.</p>
-          <a href="https://github.com/neocanario/Weather.git" target="_blank" rel="noopener" style="display: inline-block; margin-top: 10px; color: #667eea; text-decoration: none; font-weight: 600;">
-            <i class="fab fa-github"></i> Ver en GitHub
-          </a>
-          <img src="/img/weather-app.png">
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="container-section gallery-section">
-      <h2 class="section-title">Tecnologías que uso</h2>
-      <div class="carousel">
-        <div class="group-carousel">
-            <img class="card-carousel" src="img/java-logo-transparent-free-png-3781508657.png" alt="logo Java" >
-            <img class="card-carousel" src="img/css-logo.png" alt="CSS">
-            <img class="card-carousel" src="img/logo-html.png" alt="HTML" >
-            <img class="card-carousel" src="img/python-logo-452175197.png" alt="Python">
-            <img class="card-carousel" src="img/microsoft-logo-transparent-free-png-4090301237.png" alt="Microsoft">
-            <img class="card-carousel" src="img/linux-logo.png" alt="Linux logo">
-            <img class="card-carousel" src="img/js-logo.png" alt="JavaScript logo">
-            <img class="card-carousel" src="img/docker-logo.png" alt="Docker logo">
-            <img class="card-carousel" src="img/github-logo.png" alt="GitHub logo">
-            <img class="card-carousel" src="img/mysql-logo.png" alt="MySQL logo">
-        </div>
-        <div aria-hidden="true" class="group-carousel">
-            
-            <img class="card-carousel" src="img/java-logo-transparent-free-png-3781508657.png" alt="logo Java">
-            <img class="card-carousel" src="img/css-logo.png" alt="CSS">
-            <img class="card-carousel" src="img/logo-html.png" alt="HTML">
-            <img class="card-carousel" src="img/python-logo-452175197.png" alt="Python">
-            <img class="card-carousel" src="img/microsoft-logo-transparent-free-png-4090301237.png" alt="Microsoft">
-            <img class="card-carousel" src="img/linux-logo.png" alt="Linux logo">
-            <img class="card-carousel" src="img/js-logo.png" alt="JavaScript logo">
-            <img class="card-carousel" src="img/docker-logo.png" alt="Docker logo">
-            <img class="card-carousel" src="img/github-logo.png" alt="GitHub logo">
-            <img class="card-carousel" src="img/mysql-logo.png" alt="MySQL logo">
-        </div>
+      </section>
     </div>
-    </section>
 
-    <!-- Social media section -->
-    <section class="container-section social-section">
-      <h2 class="section-title">Conecta Conmigo</h2>
-      <div class="card" style="max-width: 500px; margin: 0 auto;">
-        <h3 class="card-title">Mis redes sociales</h3>
-        <!-- Social media links -->
-        <nav class="social-media">
-          <a href="https://www.instagram.com/dgwc.24/" target="_blank" rel="noopener">
-            <i class="fab fa-instagram"></i> Instagram
-          </a>
-          <a href="https://github.com/neocanario" target="_blank" rel="noopener">
-            <i class="fab fa-github"></i> Github
-          </a>
-        </nav>
-        <div class="contact-link">
-          <a href="pages/contact.html">
-            <i class="fas fa-envelope"></i> Contacto
-          </a>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Joel Sánchez</h3>
+          <p>Desarrollador Web Full Stack apasionado por crear experiencias digitales innovadoras.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Enlaces Rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="#about">Sobre Mí</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Redes Sociales</h3>
+          <div class="social-links">
+            <a href="https://github.com/neocanario" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/joel-sanchez-762809349/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:joelchdz24@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </section>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Joel Sánchez. Todos los derechos reservados.</p>
+      </div>
+    </footer>
 
-    
-    
-  </div>
-
-  <footer>
-    <div class="copy-right">
-      <p>© 2025 Joel Sánchez. Todos los derechos reservados.</p>
-      <p class="inspiration-link">
-        Diseño inspirado en:
-        <a href="https://dribbble.com/shots/25478108-Puzzle-Fintech-Website-Design-Case-Study" target="_blank"
-          rel="noopener">
-          Dribbble
-        </a>
-      </p>
-    </div>
-  </footer>
-
-  <script src="js/script.js" defer></script>
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>

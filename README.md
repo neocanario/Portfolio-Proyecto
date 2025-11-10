@@ -12,31 +12,39 @@ The portfolio features a clean, professional design with smooth animations and a
 ## ✨ Features
 
 - **Fully Responsive Design**: Seamlessly adapts to mobile, tablet, and desktop devices
-- **Modern UI/UX**: Clean interface with a striking purple and cyan color scheme
+- **Parallax Effect**: Smooth animated parallax background in hero section with GPU acceleration
+- **Modern UI/UX**: Clean interface with custom color palette and card-based design
 - **Interactive Navigation**: Smooth hamburger menu for mobile devices with fluid animations
-- **Technology Showcase**: Interactive gallery displaying tech stack with engaging hover effects
-- **Blog Section**: Dedicated space for articles and thoughts on web development
-- **Contact Form**: Functional contact page for easy communication
-- **Social Integration**: Direct links to professional social media profiles
-- **Fast Performance**: Optimized loading times with vanilla JavaScript
+- **Animated Carousel**: Infinite scroll technology showcase with hover effects
+- **Blog Management**: Full CRUD functionality - create, edit, and delete blog posts with localStorage
+- **Contact Form**: Functional contact page with validation and email integration
+- **Social Integration**: Styled social media links with ripple hover effects
+- **Fast Performance**: Optimized loading times with vanilla JavaScript and image preloading
 - **Accessibility**: Built with semantic HTML and ARIA labels for better accessibility
+- **Optimized Code**: SNAKE_CASE constants, clean CSS with no duplicates
 
 ## 🛠️ Technologies Used
 
 ### Frontend
-- **HTML5**: Semantic markup for better SEO and accessibility
+- **HTML5**: Semantic markup for better SEO and accessibility with image preloading
 - **CSS3**: Advanced styling with custom properties, Flexbox, and Grid
-  - Media Queries for responsive breakpoints
-  - CSS animations and transitions
-  - Modern layout techniques
-- **JavaScript (Vanilla)**: Pure JS for optimal performance
-  - DOM manipulation
-  - Event handling
-  - Dynamic content loading
+  - CSS Variables for consistent theming
+  - Media Queries for responsive breakpoints (mobile, tablet, desktop)
+  - CSS animations and transitions with GPU acceleration
+  - Modern layout techniques and glassmorphism effects
+  - Optimized parallax rendering
+- **JavaScript (ES6+)**: Pure JS for optimal performance
+  - DOM manipulation with SNAKE_CASE constants
+  - Event handling with requestAnimationFrame
+  - Dynamic content loading and localStorage management
+  - Parallax scroll effects with hardware acceleration
+  - Blog CRUD operations
 
 ### Libraries & Tools
-- **Font Awesome**: Professional icon library for visual enhancement
-- **Git**: Version control and collaboration
+- **Font Awesome 6.4.0**: Professional icon library for visual enhancement
+- **Google Fonts (Poppins)**: Modern typography
+- **Git & GitHub**: Version control and collaboration
+- **localStorage API**: Client-side blog post storage
 
 ## 🎨 Design Inspiration
 
@@ -102,21 +110,43 @@ Portfolio-Proyecto/
 ### No Dependencies Required
 This is a pure HTML/CSS/JavaScript project with no build process or package installation needed!
 
+## 🎯 Key Features Explained
+
+### Parallax Effect
+- **GPU-accelerated** smooth scrolling animation
+- **Two-layer depth**: Fixed sky background with moving dunes foreground
+- **Optimized performance**: Uses `requestAnimationFrame` and `will-change` CSS property
+- **Preloaded images**: Instant loading with `<link rel="preload">`
+
+### Blog System
+- **Full CRUD**: Create, read, edit, and delete blog posts
+- **LocalStorage**: Client-side persistent storage
+- **Edit functionality**: Modify existing posts with prompt dialogs
+- **Delete confirmation**: Prevents accidental deletion
+- **Date tracking**: Automatic timestamps with "(editado)" label for modified posts
+
+### Modern Carousel
+- **Infinite scroll**: Seamless looping animation
+- **Responsive cards**: Adapts to screen size with CSS Grid
+- **Hover effects**: Interactive 3D transformations
+- **Optimized rendering**: Hardware-accelerated CSS animations
+
 ## 📱 Responsive Design
 
 The portfolio is built with a mobile-first approach and adapts seamlessly across all devices:
 
 | Device Type | Breakpoint | Features |
 |------------|------------|----------|
-| 📱 **Mobile** | < 768px | Hamburger menu, stacked layout, touch-optimized |
-| 📱 **Tablet** | 768px - 1024px | Adaptive grid, optimized spacing |
-| 💻 **Desktop** | > 1024px | Full navigation, multi-column layouts, hover effects |
+| 📱 **Mobile** | < 768px | Hamburger menu, stacked layout, touch-optimized, vertical blog actions |
+| 📱 **Tablet** | 768px - 1024px | Navigation below logo, adaptive grid, unique footer design |
+| 💻 **Desktop** | > 1024px | Side-by-side nav, multi-column layouts, hover effects, parallax animations |
 
 ### Key Responsive Features
 - Fluid typography that scales with viewport
-- Flexible images and media
+- Flexible images with object-fit and preloading
 - Touch-friendly interactive elements
 - Optimized navigation for each screen size
+- Conditional parallax effects (disabled on mobile for performance)
 
 ## 🤝 Contributing
 
