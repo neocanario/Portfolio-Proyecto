@@ -25,14 +25,30 @@ if (NAV_TOGGLE && MAIN_NAV) {
   });
 }
 
-const HERO_SECTION = document.querySelector(".hero-section");
-if (HERO_SECTION) {
-  window.addEventListener("scroll", () => {
-    const SCROLL_POSITION = window.pageYOffset;
-    const PARALLAX_SPEED = 0.5;
-    
-    if (window.innerWidth > 768) {
-      HERO_SECTION.style.backgroundPositionY = `${SCROLL_POSITION * PARALLAX_SPEED}px`;
-    }
-  });
+const SKY = document.getElementById('sky');
+const DUNES = document.getElementById('dunes');
+const DUNES_PARALLAX_SPEED = 0.5;
+
+let ticking = false;
+
+function updateDunesParallax() {
+  const scrolled = window.pageYOffset;
+  const windowHeight = window.innerHeight;
+  
+  // Solo aplicar parallax en la sección hero
+  if (scrolled < windowHeight * 0.93) {
+    // Dunas - se mueven hacia arriba con el scroll
+    const dunesMove = (scrolled * DUNES_PARALLAX_SPEED);
+    DUNES.style.transform = `translateY(${dunesMove}px)`;
+  }
+  
+  ticking = false;
 }
+
+// Event listener optimizado con requestAnimationFrame
+window.addEventListener('scroll', () => {
+  if (!ticking && DUNES) {
+    window.requestAnimationFrame(updateDunesParallax);
+    ticking = true;
+  }
+});
