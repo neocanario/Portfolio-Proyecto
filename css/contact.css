@@ -32,6 +32,35 @@
   opacity: 0.9;
 }
 
+.contact-info {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.contact-info a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.contact-info a:hover {
+  opacity: 0.8;
+}
+
+.contact-info i {
+  margin-right: 0.5rem;
+}
+
 .form-group {
   margin-bottom: 1.5rem;
 }
