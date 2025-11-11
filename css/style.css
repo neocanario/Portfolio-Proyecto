@@ -660,9 +660,14 @@ button:hover,
     color: #2668db;
   }
 
+  .content {
+    padding-top: 60px;
+  }
+
   .main {
-    padding: 150px 40px;
+    padding: 180px 40px;
     max-width: 700px;
+    margin-top: 40px;
   }
 
   .main h2 {
