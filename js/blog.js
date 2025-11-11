@@ -1,18 +1,18 @@
 /**
- * Sistema CRUD para el blog usando localStorage
- * Gestiona la creación, lectura, actualización y eliminación de entradas de blog
+ * CRUD system for blog using localStorage
+ * Manages creation, reading, updating and deletion of blog entries
  */
 
 document.addEventListener("DOMContentLoaded", initBlogSystem);
 
 // ============================================================================
-// CONSTANTES
+// CONSTANTS
 // ============================================================================
 
 const STORAGE_KEY = "blogs";
 
 // ============================================================================
-// ELEMENTOS DOM
+// DOM ELEMENTS
 // ============================================================================
 
 let ADD_BLOG_FORM;
@@ -21,46 +21,46 @@ let BLOG_TITLE;
 let BLOG_CONTENT;
 
 // ============================================================================
-// INICIALIZACIÓN
+// INITIALIZATION
 // ============================================================================
 
 /**
- * Inicializa el sistema de blog
+ * Initializes the blog system
  */
 function initBlogSystem() {
-  // Obtener elementos del DOM
+  // Get DOM elements
   ADD_BLOG_FORM = document.getElementById("add-blog-form");
   BLOG_LIST = document.getElementById("blog-list");
   BLOG_TITLE = document.getElementById("blog-title");
   BLOG_CONTENT = document.getElementById("blog-content");
 
-  // Verificar que los elementos existen
+  // Verify elements exist
   if (!ADD_BLOG_FORM || !BLOG_LIST || !BLOG_TITLE || !BLOG_CONTENT) {
-    console.error("Error: No se encontraron los elementos del blog");
+    console.error("Error: Blog elements not found");
     return;
   }
 
-  // Cargar blogs existentes
+  // Load existing blogs
   loadBlogs();
 
-  // Configurar event listeners
+  // Setup event listeners
   setupEventListeners();
 }
 
 /**
- * Configura los event listeners del formulario
+ * Sets up form event listeners
  */
 function setupEventListeners() {
   ADD_BLOG_FORM.addEventListener("submit", handleFormSubmit);
 }
 
 // ============================================================================
-// MANEJO DE EVENTOS
+// EVENT HANDLING
 // ============================================================================
 
 /**
- * Maneja el envío del formulario de nuevo blog
- * @param {Event} e - Evento de submit
+ * Handles new blog form submission
+ * @param {Event} e - Submit event
  */
 function handleFormSubmit(e) {
   e.preventDefault();
@@ -69,7 +69,7 @@ function handleFormSubmit(e) {
   const content = BLOG_CONTENT.value.trim();
 
   if (!title || !content) {
-    alert("Por favor, completa todos los campos");
+    alert("Please complete all fields");
     return;
   }
 
@@ -80,14 +80,14 @@ function handleFormSubmit(e) {
 }
 
 // ============================================================================
-// OPERACIONES CRUD
+// CRUD OPERATIONS
 // ============================================================================
 
 /**
- * CREATE - Crea un nuevo objeto de blog
- * @param {string} title - Título del blog
- * @param {string} content - Contenido del blog
- * @returns {Object} Objeto blog
+ * CREATE - Creates a new blog object
+ * @param {string} title - Blog title
+ * @param {string} content - Blog content
+ * @returns {Object} Blog object
  */
 function createBlogObject(title, content) {
   return {
@@ -100,8 +100,8 @@ function createBlogObject(title, content) {
 }
 
 /**
- * CREATE - Guarda un blog en localStorage
- * @param {Object} blog - Objeto blog a guardar
+ * CREATE - Saves a blog to localStorage
+ * @param {Object} blog - Blog object to save
  */
 function saveBlog(blog) {
   const blogs = getBlogs();
@@ -110,8 +110,8 @@ function saveBlog(blog) {
 }
 
 /**
- * READ - Obtiene todos los blogs del localStorage
- * @returns {Array} Array de blogs
+ * READ - Gets all blogs from localStorage
+ * @returns {Array} Array of blogs
  */
 function getBlogs() {
   const blogsData = localStorage.getItem(STORAGE_KEY);
@@ -119,7 +119,7 @@ function getBlogs() {
 }
 
 /**
- * READ - Carga y muestra todos los blogs en el DOM
+ * READ - Loads and displays all blogs in the DOM
  */
 function loadBlogs() {
   const blogs = getBlogs();
@@ -130,7 +130,7 @@ function loadBlogs() {
     return;
   }
 
-  // Mostrar blogs del más reciente al más antiguo
+  // Display blogs from newest to oldest
   const reversedBlogs = [...blogs].reverse();
   reversedBlogs.forEach((blog) => {
     const blogCard = createBlogCard(blog);
@@ -139,33 +139,33 @@ function loadBlogs() {
 }
 
 /**
- * UPDATE - Edita un blog existente
- * @param {number} id - ID del blog a editar
+ * UPDATE - Edits an existing blog
+ * @param {number} id - ID of the blog to edit
  */
 function editBlog(id) {
   const blogs = getBlogs();
   const blogIndex = blogs.findIndex((b) => b.id === id);
 
   if (blogIndex === -1) {
-    alert("Blog no encontrado");
+    alert("Blog not found");
     return;
   }
 
   const blog = blogs[blogIndex];
-  const newTitle = prompt("Editar título:", blog.title);
+  const newTitle = prompt("Edit title:", blog.title);
 
   if (newTitle === null) return;
 
-  const newContent = prompt("Editar contenido:", blog.content);
+  const newContent = prompt("Edit content:", blog.content);
 
   if (newContent === null) return;
 
   if (!newTitle.trim() || !newContent.trim()) {
-    alert("El título y contenido no pueden estar vacíos");
+    alert("Title and content cannot be empty");
     return;
   }
 
-  // Actualizar blog
+  // Update blog
   blogs[blogIndex] = {
     ...blog,
     title: newTitle.trim(),
@@ -178,11 +178,11 @@ function editBlog(id) {
 }
 
 /**
- * DELETE - Elimina un blog
- * @param {number} id - ID del blog a eliminar
+ * DELETE - Deletes a blog
+ * @param {number} id - ID of the blog to delete
  */
 function deleteBlog(id) {
-  if (!confirm("¿Estás seguro de que quieres eliminar esta entrada?")) {
+  if (!confirm("Are you sure you want to delete this entry?")) {
     return;
   }
 
@@ -194,19 +194,19 @@ function deleteBlog(id) {
 }
 
 // ============================================================================
-// CREACIÓN DE ELEMENTOS DOM
+// DOM ELEMENT CREATION
 // ============================================================================
 
 /**
- * Crea una tarjeta de blog en el DOM
- * @param {Object} blog - Objeto blog
- * @returns {HTMLElement} Elemento div con la tarjeta del blog
+ * Creates a blog card in the DOM
+ * @param {Object} blog - Blog object
+ * @returns {HTMLElement} Div element with the blog card
  */
 function createBlogCard(blog) {
   const card = document.createElement("div");
   card.className = "blog-entry";
 
-  const editedLabel = blog.edited ? " (editado)" : "";
+  const editedLabel = blog.edited ? " (edited)" : "";
 
   card.innerHTML = `
     <h3>${escapeHtml(blog.title)}</h3>
@@ -214,10 +214,10 @@ function createBlogCard(blog) {
     <p>${escapeHtml(blog.content)}</p>
     <div class="blog-entry-actions">
       <button class="btn-edit" onclick="editBlog(${blog.id})">
-        <i class="fas fa-edit"></i> Editar
+        <i class="fas fa-edit"></i> Edit
       </button>
       <button class="btn-delete" onclick="deleteBlog(${blog.id})">
-        <i class="fas fa-trash"></i> Eliminar
+        <i class="fas fa-trash"></i> Delete
       </button>
     </div>
   `;
@@ -226,24 +226,24 @@ function createBlogCard(blog) {
 }
 
 /**
- * Muestra el estado vacío cuando no hay blogs
+ * Shows empty state when there are no blogs
  */
 function showEmptyState() {
   BLOG_LIST.innerHTML = `
     <p class="no-blogs">
-      No hay entradas todavía. ¡Crea tu primera publicación!
+      No entries yet. Create your first post!
     </p>
   `;
 }
 
 // ============================================================================
-// UTILIDADES
+// UTILITIES
 // ============================================================================
 
 /**
- * Escapa caracteres HTML para prevenir XSS
- * @param {string} text - Texto a escapar
- * @returns {string} Texto escapado
+ * Escapes HTML characters to prevent XSS
+ * @param {string} text - Text to escape
+ * @returns {string} Escaped text
  */
 function escapeHtml(text) {
   const div = document.createElement("div");
@@ -252,7 +252,7 @@ function escapeHtml(text) {
 }
 
 // ============================================================================
-// FUNCIONES GLOBALES (para onclick en HTML)
+// GLOBAL FUNCTIONS (for onclick in HTML)
 // ============================================================================
 
 window.editBlog = editBlog;

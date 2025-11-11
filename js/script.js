@@ -1,24 +1,24 @@
 /**
- * Script principal del portfolio
- * Gestiona el menú hamburguesa y la validación del formulario de contacto
+ * Main portfolio script
+ * Manages hamburger menu and contact form validation
  */
 
 document.addEventListener("DOMContentLoaded", initApp);
 
 // ============================================================================
-// CONSTANTES
+// CONSTANTS
 // ============================================================================
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const ERROR_MESSAGES = {
-  nombreVacio: "Por favor, ingresa tu nombre",
-  emailVacio: "Por favor, ingresa tu email",
-  emailInvalido: "Por favor, ingresa un email válido",
-  mensajeVacio: "Por favor, ingresa un mensaje",
+  nombreVacio: "Please enter your name",
+  emailVacio: "Please enter your email",
+  emailInvalido: "Please enter a valid email",
+  mensajeVacio: "Please enter a message",
 };
 
 // ============================================================================
-// ELEMENTOS DOM
+// DOM ELEMENTS
 // ============================================================================
 
 let HAMBURGER;
@@ -26,29 +26,29 @@ let NAV_LINKS;
 let CONTACT_FORM;
 
 // ============================================================================
-// INICIALIZACIÓN
+// INITIALIZATION
 // ============================================================================
 
 /**
- * Inicializa la aplicación
+ * Initializes the application
  */
 function initApp() {
-  // Obtener elementos del DOM
+  // Get DOM elements
   HAMBURGER = document.getElementById("hamburger");
   NAV_LINKS = document.getElementById("navLinks");
   CONTACT_FORM = document.getElementById("contactForm");
 
-  // Inicializar módulos
+  // Initialize modules
   initHamburgerMenu();
   initContactForm();
 }
 
 // ============================================================================
-// MENÚ HAMBURGUESA
+// HAMBURGER MENU
 // ============================================================================
 
 /**
- * Inicializa el menú hamburguesa
+ * Initializes the hamburger menu
  */
 function initHamburgerMenu() {
   if (!HAMBURGER || !NAV_LINKS) return;
@@ -58,7 +58,7 @@ function initHamburgerMenu() {
 }
 
 /**
- * Alterna la visibilidad del menú
+ * Toggles menu visibility
  */
 function toggleMenu() {
   HAMBURGER.classList.toggle("active");
@@ -66,7 +66,7 @@ function toggleMenu() {
 }
 
 /**
- * Configura los enlaces del menú para cerrarlo al hacer clic
+ * Sets up menu links to close on click
  */
 function setupMenuLinks() {
   const links = NAV_LINKS.querySelectorAll("a");
@@ -77,7 +77,7 @@ function setupMenuLinks() {
 }
 
 /**
- * Cierra el menú hamburguesa
+ * Closes the hamburger menu
  */
 function closeMenu() {
   HAMBURGER.classList.remove("active");

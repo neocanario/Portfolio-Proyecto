@@ -1,19 +1,19 @@
 /**
- * PORTFOLIO - ESTILOS PRINCIPALES
- * Estructura del archivo:
- * 1. Reset y estilos base
- * 2. Layout principal
- * 3. Navegación
- * 4. Contenido principal
- * 5. Secciones
- * 6. Galería
- * 7. Contacto
+ * PORTFOLIO - MAIN STYLES
+ * File structure:
+ * 1. Reset and base styles
+ * 2. Main layout
+ * 3. Navigation
+ * 4. Main content
+ * 5. Sections
+ * 6. Gallery
+ * 7. Contact
  * 8. Footer
  * 9. Media Queries
  */
 
 /* ============================================================================
-   1. RESET Y ESTILOS BASE
+  1. RESET AND BASE STYLES
    ============================================================================ */
 
 * {
@@ -30,7 +30,7 @@ a {
 body {
   color: #000;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   width: 100%;
 }
 
@@ -39,7 +39,7 @@ p {
 }
 
 /* ============================================================================
-   2. LAYOUT PRINCIPAL
+  2. MAIN LAYOUT
    ============================================================================ */
 
 .container {
@@ -60,7 +60,7 @@ p {
 }
 
 /* ============================================================================
-   3. NAVEGACIÓN
+  3. NAVIGATION
    ============================================================================ */
 
 .navbar {
@@ -84,7 +84,7 @@ p {
   color: #2668db;
 }
 
-/* Enlaces de navegación */
+/* Navigation links */
 ul.nav-links {
   display: flex;
   list-style: none;
@@ -105,7 +105,7 @@ li.nav-link a:hover {
   color: #2668db;
 }
 
-/* Menú hamburguesa (móvil) */
+/* Hamburger menu (mobile) */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -125,7 +125,7 @@ li.nav-link a:hover {
   border-radius: 3px;
 }
 
-/* Animación del hamburguesa */
+/* Hamburger animation */
 .hamburger.active .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(7px, 7px);
 }
@@ -139,7 +139,7 @@ li.nav-link a:hover {
 }
 
 /* ============================================================================
-   4. CONTENIDO PRINCIPAL
+   4. MAIN CONTENT
    ============================================================================ */
 
 .content {
@@ -186,7 +186,7 @@ li.nav-link a:hover {
   text-align: center;
 }
 
-/* Botones */
+/* Buttons */
 button,
 .btn {
   margin-top: 10px;
@@ -221,7 +221,7 @@ button:hover,
 }
 
 /* ============================================================================
-   5. SECCIONES
+  5. SECTIONS
    ============================================================================ */
 
 .section-one,
@@ -249,7 +249,7 @@ button:hover,
   text-align: center;
 }
 
-/* Estilos comunes de bloques */
+/* Common block styles */
 .block h3 i {
   margin-right: 10px;
 }
@@ -267,7 +267,7 @@ button:hover,
   margin-bottom: 8px;
 }
 
-/* Estilos comunes para todos los bloques */
+/* Common styles for all blocks */
 .section-one .block,
 .section-two .block,
 .section-three .block {
@@ -293,15 +293,23 @@ button:hover,
   font-size: 15px;
 }
 
-/* Section One - Azul */
+/* Section One - Blue */
 .section-one .block {
-  background: linear-gradient(135deg, rgba(38, 104, 219, 0.1), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(38, 104, 219, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
   border-left: 4px solid #2668db;
   padding: 25px 50px 25px 30px;
 }
 
 .section-one .block:hover {
-  background: linear-gradient(135deg, rgba(38, 104, 219, 0.15), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(38, 104, 219, 0.15),
+    rgba(255, 255, 255, 0.1)
+  );
   transform: translateX(5px) scale(1.02);
   box-shadow: 0 6px 20px rgba(38, 104, 219, 0.3);
 }
@@ -310,7 +318,7 @@ button:hover,
   color: #2668db;
 }
 
-/* Section Two - Verde */
+/* Section Two - Green */
 .section-two .block {
   background: rgba(255, 255, 255, 0.12);
   border-right: 4px solid #28a745;
@@ -334,9 +342,13 @@ button:hover,
   color: #28a745;
 }
 
-/* Section Three - Amarillo */
+/* Section Three - Yellow */
 .section-three .block {
-  background: linear-gradient(90deg, rgba(255, 193, 7, 0.1), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 193, 7, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
   border-top: 4px solid #ffc107;
   border-bottom: 4px solid #ffc107;
   padding: 30px 50px;
@@ -344,7 +356,11 @@ button:hover,
 }
 
 .section-three .block:hover {
-  background: linear-gradient(90deg, rgba(255, 193, 7, 0.15), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 193, 7, 0.15),
+    rgba(255, 255, 255, 0.1)
+  );
   transform: translateY(-5px) scale(1.01);
   box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);
 }
@@ -386,7 +402,7 @@ button:hover,
   box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
 }
 
-/* Galería */
+/* Gallery */
 .gallery {
   width: 100%;
   margin: 20px 0;
@@ -426,7 +442,7 @@ button:hover,
   transform: scale(1.05);
 }
 
-/* Contacto */
+/* Contact */
 .contact {
   width: 100%;
   margin: 20px 0;
@@ -678,7 +694,7 @@ button:hover,
   }
 }
 
-/* Tablets (portrait) y Mobile común */
+/* Tablets (portait) and Common Mobile */
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;

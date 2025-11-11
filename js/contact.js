@@ -1,9 +1,9 @@
 // ============================================================================
-// FORMULARIO DE CONTACTO
+// CONTACT FORM
 // ============================================================================
 
 /**
- * Inicializa el formulario de contacto
+ * Initializes the contact form
  */
 function initContactForm() {
   if (!CONTACT_FORM) return;
@@ -12,8 +12,8 @@ function initContactForm() {
 }
 
 /**
- * Maneja el envío del formulario de contacto
- * @param {Event} e - Evento de submit
+ * Handles contact form submission
+ * @param {Event} e - Submit event
  */
 function handleContactSubmit(e) {
   e.preventDefault();
@@ -28,8 +28,7 @@ function handleContactSubmit(e) {
     return;
   }
 
-  // Formulario válido
-  // Formulario válido → enviar datos al backend
+  // Valid form → send data to backend
   fetch("/api.php", {
     method: "POST",
     headers: {
@@ -40,7 +39,7 @@ function handleContactSubmit(e) {
       email: formData.email,
       subject: "Contacto web",
       message: formData.mensaje,
-      phone: "", // opcional
+      phone: "", // optional
     }),
   })
     .then((response) => response.json())
@@ -59,8 +58,8 @@ function handleContactSubmit(e) {
 }
 
 /**
- * Obtiene los datos del formulario
- * @returns {Object} Datos del formulario
+ * Gets form data
+ * @returns {Object} Form data
  */
 function getFormData() {
   return {
@@ -71,14 +70,14 @@ function getFormData() {
 }
 
 /**
- * Valida los datos del formulario
- * @param {Object} data - Datos a validar
- * @returns {Object} Resultado de la validación
+ * Validates form data
+ * @param {Object} data - Data to validate
+ * @returns {Object} Validation result
  */
 function validateFormData(data) {
   const errors = [];
 
-  // Validar nombre
+  // Validate name
   if (!data.nombre) {
     errors.push({
       field: "nombre",
@@ -86,7 +85,7 @@ function validateFormData(data) {
     });
   }
 
-  // Validar email
+  // Validate email
   if (!data.email) {
     errors.push({
       field: "email",
@@ -99,7 +98,7 @@ function validateFormData(data) {
     });
   }
 
-  // Validar mensaje
+  // Validate message
   if (!data.mensaje) {
     errors.push({
       field: "mensaje",
@@ -114,8 +113,8 @@ function validateFormData(data) {
 }
 
 /**
- * Muestra los errores en el formulario
- * @param {Array} errors - Array de errores
+ * Displays errors in the form
+ * @param {Array} errors - Array of errors
  */
 function displayErrors(errors) {
   errors.forEach((error) => {
@@ -124,9 +123,9 @@ function displayErrors(errors) {
 }
 
 /**
- * Muestra un error en un campo específico
- * @param {string} fieldId - ID del campo
- * @param {string} message - Mensaje de error
+ * Shows an error on a specific field
+ * @param {string} fieldId - Field ID
+ * @param {string} message - Error message
  */
 function showError(fieldId, message) {
   const field = document.getElementById(fieldId);
@@ -139,7 +138,7 @@ function showError(fieldId, message) {
 }
 
 /**
- * Limpia todos los errores del formulario
+ * Clears all form errors
  */
 function clearErrors() {
   const errorMessages = document.querySelectorAll(".error-message");
