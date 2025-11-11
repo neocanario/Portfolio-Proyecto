@@ -1,4 +1,21 @@
-/* Reset CSS */
+/**
+ * PORTFOLIO - ESTILOS PRINCIPALES
+ * Estructura del archivo:
+ * 1. Reset y estilos base
+ * 2. Layout principal
+ * 3. Navegación
+ * 4. Contenido principal
+ * 5. Secciones
+ * 6. Galería
+ * 7. Contacto
+ * 8. Footer
+ * 9. Media Queries
+ */
+
+/* ============================================================================
+   1. RESET Y ESTILOS BASE
+   ============================================================================ */
+
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +38,10 @@ p {
   text-align: left;
 }
 
-/* Layout Principal */
+/* ============================================================================
+   2. LAYOUT PRINCIPAL
+   ============================================================================ */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -39,7 +59,10 @@ p {
   overflow-x: hidden;
 }
 
-/* Navbar */
+/* ============================================================================
+   3. NAVEGACIÓN
+   ============================================================================ */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -61,6 +84,7 @@ p {
   color: #2668db;
 }
 
+/* Enlaces de navegación */
 ul.nav-links {
   display: flex;
   list-style: none;
@@ -81,7 +105,7 @@ li.nav-link a:hover {
   color: #2668db;
 }
 
-/* Hamburger Menu */
+/* Menú hamburguesa (móvil) */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -101,6 +125,7 @@ li.nav-link a:hover {
   border-radius: 3px;
 }
 
+/* Animación del hamburguesa */
 .hamburger.active .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(7px, 7px);
 }
@@ -113,7 +138,10 @@ li.nav-link a:hover {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Contenido Principal */
+/* ============================================================================
+   4. CONTENIDO PRINCIPAL
+   ============================================================================ */
+
 .content {
   display: flex;
   justify-content: center;
@@ -155,8 +183,10 @@ li.nav-link a:hover {
   line-height: 1.6;
   margin-bottom: 30px;
   color: #333;
+  text-align: center;
 }
 
+/* Botones */
 button,
 .btn {
   margin-top: 10px;
@@ -190,11 +220,16 @@ button:hover,
   display: none;
 }
 
-/* Secciones */
+/* ============================================================================
+   5. SECCIONES
+   ============================================================================ */
+
 .section-one,
 .section-two,
 .section-three {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
@@ -203,13 +238,6 @@ button:hover,
   margin: 20px 0;
   padding: 50px;
   overflow-x: hidden;
-}
-
-.section-one,
-.section-two,
-.section-three {
-  flex-direction: column;
-  align-items: center;
 }
 
 .section-one h2,
@@ -221,7 +249,7 @@ button:hover,
   text-align: center;
 }
 
-/* Bloques */
+/* Estilos comunes de bloques */
 .block h3 i {
   margin-right: 10px;
 }
@@ -239,15 +267,37 @@ button:hover,
   margin-bottom: 8px;
 }
 
-/* Section One - Azul */
-.section-one .block {
+/* Estilos comunes para todos los bloques */
+.section-one .block,
+.section-two .block,
+.section-three .block {
   width: 90%;
-  background: linear-gradient(135deg, rgba(38, 104, 219, 0.1), rgba(255, 255, 255, 0.05));
-  border-left: 4px solid #2668db;
   border-radius: 8px;
-  padding: 25px 50px 25px 30px;
   margin-bottom: 15px;
   transition: all 0.3s ease;
+}
+
+.section-one .block h3,
+.section-two .block h3,
+.section-three .block h3 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.section-one .block p,
+.section-two .block p,
+.section-three .block p {
+  color: #333;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* Section One - Azul */
+.section-one .block {
+  background: linear-gradient(135deg, rgba(38, 104, 219, 0.1), rgba(255, 255, 255, 0.05));
+  border-left: 4px solid #2668db;
+  padding: 25px 50px 25px 30px;
 }
 
 .section-one .block:hover {
@@ -258,26 +308,13 @@ button:hover,
 
 .section-one .block h3 {
   color: #2668db;
-  margin-bottom: 12px;
-  font-size: 22px;
-  font-weight: 600;
-}
-
-.section-one .block p {
-  color: #333;
-  line-height: 1.8;
-  font-size: 15px;
 }
 
 /* Section Two - Verde */
 .section-two .block {
-  width: 90%;
   background: rgba(255, 255, 255, 0.12);
   border-right: 4px solid #28a745;
-  border-radius: 8px;
   padding: 25px 30px 25px 50px;
-  margin-bottom: 15px;
-  transition: all 0.3s ease;
   text-align: right;
 }
 
@@ -289,9 +326,6 @@ button:hover,
 
 .section-two .block h3 {
   color: #28a745;
-  margin-bottom: 12px;
-  font-size: 22px;
-  font-weight: 600;
 }
 
 .section-two .block h3 i {
@@ -300,22 +334,13 @@ button:hover,
   color: #28a745;
 }
 
-.section-two .block p {
-  color: #333;
-  line-height: 1.8;
-  font-size: 15px;
-}
-
 /* Section Three - Amarillo */
 .section-three .block {
-  width: 90%;
   background: linear-gradient(90deg, rgba(255, 193, 7, 0.1), rgba(255, 255, 255, 0.05));
   border-top: 4px solid #ffc107;
   border-bottom: 4px solid #ffc107;
-  border-radius: 8px;
   padding: 30px 50px;
   margin-bottom: 20px;
-  transition: all 0.3s ease;
 }
 
 .section-three .block:hover {
@@ -326,19 +351,10 @@ button:hover,
 
 .section-three .block h3 {
   color: #ff9800;
-  margin-bottom: 12px;
-  font-size: 22px;
-  font-weight: 600;
 }
 
 .section-three .block h3 i {
   color: #ffc107;
-}
-
-.section-three .block p {
-  color: #333;
-  line-height: 1.8;
-  font-size: 15px;
 }
 
 .section-three .block h4 {
@@ -662,7 +678,7 @@ button:hover,
   }
 }
 
-/* Tablets (portrait) */
+/* Tablets (portrait) y Mobile común */
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;

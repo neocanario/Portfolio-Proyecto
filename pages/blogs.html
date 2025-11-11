@@ -4,29 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyectos - En Mantenimiento</title>
-  <link rel="icon" type="image/ico" href="../img/ghost.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/blog.css">
-  
-
+  <title>Blog - Portfolio</title>
 </head>
 
 <body>
-  <header id="main-container-up">
-    <div id="main-container-up-left">
-      <img src="../img/ghost.ico" alt="Ghost icon logo">
-      <h2>Joel Sánchez</h2>
-    </div>
-
-    <nav id="main-nav" class="main-nav">
-      <a href="../index.html">Inicio</a>
-      <a href="#" class="active">Blog</a>
-      <a href="./contact.html">Contacto</a>
-      <a href="../cv.pdf " download="cv">CV</a>
-    </nav>
-    <button id="nav-toggle">☰</button>
-  </header>
+  <nav class="navbar">
+    <div class="logo">Portfolio</div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-link"><a href="../index.html#about">Sobre Mi</a></li>
+      <li class="nav-link"><a href="../index.html#projects">Projects</a></li>
+      <li class="nav-link"><a href="blogs.html">Blog</a></li>
+      <li class="nav-link"><a href="../index.html#contacto">Contactos</a></li>
+    </ul>
+  </nav>
   <section class="blog-section">
     <h2>Blog</h2>
 
@@ -42,6 +41,45 @@
 
     <div id="blog-list"></div>
   </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Joel Sánchez</h3>
+        <p>Desarrollador Web Full Stack apasionado por crear experiencias digitales innovadoras.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul class="footer-links">
+          <li><a href="../index.html#about">Sobre Mí</a></li>
+          <li><a href="../index.html#projects">Proyectos</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Redes Sociales</h3>
+        <div class="social-links">
+          <a href="https://github.com/neocanario" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/joel-sanchez-762809349/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:joelchdz24@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Joel Sánchez. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
   <script src="../js/script.js"></script>
   <script src="../js/blog.js"></script>
 
