@@ -1,17 +1,3 @@
-/**
- * PORTFOLIO - MAIN STYLES
- * File structure:
- * 1. Reset and base styles
- * 2. Main layout
- * 3. Navigation
- * 4. Main content
- * 5. Sections
- * 6. Gallery
- * 7. Contact
- * 8. Footer
- * 9. Media Queries
- */
-
 /* ============================================================================
   1. RESET AND BASE STYLES
    ============================================================================ */
@@ -22,41 +8,22 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-}
-
 body {
-  color: #000;
+  color: #1a1a2e;
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
-  width: 100%;
-}
-
-p {
-  text-align: left;
+  background: #fafbfc;
 }
 
 /* ============================================================================
   2. MAIN LAYOUT
    ============================================================================ */
 
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
 .main-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 /* ============================================================================
@@ -72,19 +39,19 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background: rgba(255, 255, 255, 0.56);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(38, 104, 219, 0.08);
   z-index: 1000;
 }
 
 .logo {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
   color: #2668db;
 }
 
-/* Navigation links */
 ul.nav-links {
   display: flex;
   list-style: none;
@@ -92,20 +59,21 @@ ul.nav-links {
 }
 
 li.nav-link {
-  font-size: 17px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 li.nav-link a {
-  color: #000;
-  transition: color 0.3s ease;
+  color: #1a1a2e;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+  text-decoration: none;
 }
 
 li.nav-link a:hover {
   color: #2668db;
+  font-weight: 600;
 }
 
-/* Hamburger menu (mobile) */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -125,7 +93,6 @@ li.nav-link a:hover {
   border-radius: 3px;
 }
 
-/* Hamburger animation */
 .hamburger.active .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(7px, 7px);
 }
@@ -147,82 +114,77 @@ li.nav-link a:hover {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
 }
 
 .main {
-  width: 100%;
   max-width: 800px;
   padding: 230px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    0 20px 60px rgba(38, 104, 219, 0.12),
+    0 0 0 1px rgba(38, 104, 219, 0.05);
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .main:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 
+    0 32px 80px rgba(38, 104, 219, 0.16),
+    0 0 0 1px rgba(38, 104, 219, 0.08);
 }
 
 .main h2 {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 20px;
   color: #2668db;
   line-height: 1.2;
+  letter-spacing: -1px;
 }
 
 .main p {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: #333;
-  text-align: center;
+  color: #1a1a2e;
 }
 
-/* Buttons */
 button,
 .btn {
   margin-top: 10px;
-  width: 100%;
-  max-width: 250px;
+  max-width: 280px;
   height: 50px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #2668db;
-  background: transparent;
-  border: 3px solid #2668db;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background: #2668db;
+  border: none;
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(38, 104, 219, 0.2);
+  box-shadow: 0 12px 24px rgba(38, 104, 219, 0.25);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  padding: 0 24px;
 }
 
 button:hover,
 .btn:hover {
-  background: #2668db;
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(38, 104, 219, 0.4);
+  background: #1a4ea8;
+  transform: translateY(-4px);
+  box-shadow: 
+    0 20px 40px rgba(38, 104, 219, 0.35),
+    0 0 0 4px rgba(38, 104, 219, 0.1);
 }
-
-.image-wrapper {
-  display: none;
-}
-
-/* ============================================================================
-  5. SECTIONS
-   ============================================================================ */
 
 .section-one,
 .section-two,
@@ -230,26 +192,21 @@ button:hover,
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
   gap: 20px;
-  width: 100%;
   min-height: 50vh;
   margin: 20px 0;
   padding: 50px;
-  overflow-x: hidden;
 }
 
 .section-one h2,
 .section-two h2,
 .section-three h2 {
-  width: 100%;
-  font-size: 32px;
+  font-size: 28px;
+  font-weight: 800;
   margin-bottom: 30px;
-  text-align: center;
+  color: #1a1a2e;
+  letter-spacing: -0.5px;
 }
-
-/* Common block styles */
 .block h3 i {
   margin-right: 10px;
 }
@@ -258,7 +215,6 @@ button:hover,
   list-style-type: disc;
   margin-top: 10px;
   padding-left: 20px;
-  text-align: left;
 }
 
 .block ul li {
@@ -267,51 +223,54 @@ button:hover,
   margin-bottom: 8px;
 }
 
-/* Common styles for all blocks */
 .section-one .block,
 .section-two .block,
 .section-three .block {
   width: 90%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  transition: all 0.3s ease;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-one .block h3,
 .section-two .block h3,
 .section-three .block h3 {
   margin-bottom: 12px;
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
 }
 
 .section-one .block p,
 .section-two .block p,
 .section-three .block p {
-  color: #333;
+  color: rgba(26, 26, 46, 0.8);
   line-height: 1.8;
   font-size: 15px;
+  font-weight: 400;
 }
 
 /* Section One - Blue */
 .section-one .block {
   background: linear-gradient(
     135deg,
-    rgba(38, 104, 219, 0.1),
-    rgba(255, 255, 255, 0.05)
+    rgba(38, 104, 219, 0.06),
+    rgba(38, 104, 219, 0.02)
   );
   border-left: 4px solid #2668db;
-  padding: 25px 50px 25px 30px;
+  padding: 28px 50px 28px 32px;
 }
 
 .section-one .block:hover {
   background: linear-gradient(
     135deg,
-    rgba(38, 104, 219, 0.15),
-    rgba(255, 255, 255, 0.1)
+    rgba(38, 104, 219, 0.1),
+    rgba(38, 104, 219, 0.04)
   );
-  transform: translateX(5px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(38, 104, 219, 0.3);
+  transform: translateX(8px);
+  box-shadow: 
+    0 16px 48px rgba(38, 104, 219, 0.15),
+    -4px 0 0 0 #2668db;
 }
 
 .section-one .block h3 {
@@ -320,16 +279,26 @@ button:hover,
 
 /* Section Two - Green */
 .section-two .block {
-  background: rgba(255, 255, 255, 0.12);
+  background: linear-gradient(
+    135deg,
+    rgba(40, 167, 69, 0.06),
+    rgba(40, 167, 69, 0.02)
+  );
   border-right: 4px solid #28a745;
-  padding: 25px 30px 25px 50px;
+  padding: 28px 32px 28px 50px;
   text-align: right;
 }
 
 .section-two .block:hover {
-  background: rgba(255, 255, 255, 0.18);
-  transform: translateX(-5px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(40, 167, 69, 0.1),
+    rgba(40, 167, 69, 0.04)
+  );
+  transform: translateX(-8px);
+  box-shadow: 
+    0 16px 48px rgba(40, 167, 69, 0.15),
+    4px 0 0 0 #28a745;
 }
 
 .section-two .block h3 {
@@ -345,24 +314,25 @@ button:hover,
 /* Section Three - Yellow */
 .section-three .block {
   background: linear-gradient(
-    90deg,
-    rgba(255, 193, 7, 0.1),
-    rgba(255, 255, 255, 0.05)
+    135deg,
+    rgba(255, 193, 7, 0.06),
+    rgba(255, 152, 0, 0.03)
   );
-  border-top: 4px solid #ffc107;
-  border-bottom: 4px solid #ffc107;
-  padding: 30px 50px;
+  border-left: 4px solid #ffc107;
+  padding: 32px 50px;
   margin-bottom: 20px;
 }
 
 .section-three .block:hover {
   background: linear-gradient(
-    90deg,
-    rgba(255, 193, 7, 0.15),
-    rgba(255, 255, 255, 0.1)
+    135deg,
+    rgba(255, 193, 7, 0.1),
+    rgba(255, 152, 0, 0.05)
   );
-  transform: translateY(-5px) scale(1.01);
-  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 
+    0 20px 56px rgba(255, 193, 7, 0.18),
+    0 0 0 1px rgba(255, 193, 7, 0.1);
 }
 
 .section-three .block h3 {
@@ -374,46 +344,47 @@ button:hover,
 }
 
 .section-three .block h4 {
-  color: #ff9800;
-  font-size: 18px;
+  color: #e68900;
+  font-size: 17px;
   margin-top: 15px;
   margin-bottom: 10px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .section-three .block ul {
-  color: #333;
+  color: rgba(26, 26, 46, 0.8);
 }
 
 .section-three .block a {
   display: inline-block;
   margin-top: 15px;
-  padding: 10px 20px;
+  padding: 10px 24px;
   background: #ffc107;
-  color: #000;
-  border-radius: 5px;
-  font-weight: 500;
+  color: #1a1a2e;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
   transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.25);
 }
 
 .section-three .block a:hover {
   background: #ff9800;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(255, 193, 7, 0.35);
 }
 
-/* Gallery */
 .gallery {
-  width: 100%;
   margin: 20px 0;
   padding: 50px;
-  overflow-x: hidden;
 }
 
 .gallery h2 {
-  font-size: 32px;
+  font-size: 28px;
+  font-weight: 800;
   margin-bottom: 30px;
-  text-align: center;
+  color: #1a1a2e;
+  letter-spacing: -0.5px;
 }
 
 .gallery-grid {
@@ -426,34 +397,45 @@ button:hover,
 
 .gallery-item {
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
   width: 120px;
   height: 120px;
+  box-shadow: 0 8px 24px rgba(38, 104, 219, 0.1);
+  transition: all 0.3s ease;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 16px 40px rgba(38, 104, 219, 0.2);
+  transform: translateY(-4px);
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  object-fit: contain;
+  transition: transform 0.4s ease;
 }
 
 .gallery-item img:hover {
   transform: scale(1.05);
 }
 
-/* Contact */
 .contact {
-  width: 100%;
   margin: 20px 0;
   padding: 50px;
-  overflow-x: hidden;
 }
 
 .contact h2 {
-  font-size: 32px;
+  font-size: 28px;
+  font-weight: 800;
   margin-bottom: 30px;
-  text-align: center;
+  color: #1a1a2e;
+  letter-spacing: -0.5px;
 }
 
 .contact-content {
@@ -468,14 +450,18 @@ button:hover,
 }
 
 .contact-info h3 {
-  font-size: 24px;
+  font-size: 22px;
+  font-weight: 700;
   margin-bottom: 20px;
+  color: #1a1a2e;
+  letter-spacing: -0.3px;
 }
 
 .contact-info p {
   font-size: 16px;
   margin-bottom: 10px;
   line-height: 1.6;
+  color: rgba(26, 26, 46, 0.8);
 }
 
 .contact-form form {
@@ -493,6 +479,7 @@ button:hover,
 .error-message {
   color: #d32f2f;
   font-size: 13px;
+  font-weight: 500;
   min-height: 18px;
   display: block;
 }
@@ -500,16 +487,28 @@ button:hover,
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #000;
-  border-radius: 8px;
+  padding: 14px 16px;
+  border: 2px solid rgba(38, 104, 219, 0.15);
+  border-radius: 12px;
   font-size: 15px;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+  background: rgba(255, 255, 255, 0.8);
+  color: #1a1a2e;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2668db;
+  box-shadow: 0 0 0 4px rgba(38, 104, 219, 0.1);
+  background: #fff;
 }
 
 .contact-form input.error,
 .contact-form textarea.error {
   border-color: #d32f2f;
+  box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
 }
 
 .contact-form textarea {
@@ -520,12 +519,27 @@ button:hover,
   margin-top: 0;
 }
 
-/* Footer */
 .footer {
-  background: linear-gradient(135deg, #2668db, #1a4ea8);
+  background: linear-gradient(135deg, #1a4ea8, #2668db);
   color: #fff;
   padding: 50px 20px 20px;
-  margin-top: 40px;
+  margin-top: 60px;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
 }
 
 .footer-content {
@@ -543,9 +557,10 @@ button:hover,
 }
 
 .footer-section h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 15px;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.3px;
 }
 
 .footer-section p {
@@ -585,22 +600,24 @@ button:hover,
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   color: #fff;
   font-size: 18px;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .social-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer-bottom p {
@@ -608,15 +625,11 @@ button:hover,
   opacity: 0.8;
 }
 
-/* Media Queries */
-
-/* Tablets (landscape) - iPads Pro y similares */
 @media screen and (max-width: 1024px) {
   .navbar {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    padding: 20px 30px;
     background: rgba(255, 255, 255, 0.98);
     border-bottom: 2px solid #2668db;
   }
@@ -626,7 +639,6 @@ button:hover,
   }
 
   .logo {
-    font-size: 30px;
     background: linear-gradient(135deg, #2668db, #1a4ea8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -636,17 +648,12 @@ button:hover,
   ul.nav-links {
     position: relative;
     flex-direction: row;
-    gap: 25px;
     background: transparent;
     width: auto;
     height: auto;
     padding: 0;
     box-shadow: none;
     justify-content: center;
-  }
-
-  li.nav-link {
-    font-size: 16px;
   }
 
   li.nav-link a {
@@ -658,6 +665,33 @@ button:hover,
   li.nav-link a:hover {
     background: rgba(38, 104, 219, 0.1);
     color: #2668db;
+  }
+
+  .section-one,
+  .section-two,
+  .section-three,
+  .gallery,
+  .contact {
+    padding: 40px 30px;
+  }
+}
+
+/* Tablets (landscape) - Specific styles */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  ul.nav-links {
+    gap: 25px;
+  }
+
+  li.nav-link {
+    font-size: 16px;
   }
 
   .content {
@@ -678,14 +712,6 @@ button:hover,
     font-size: 18px;
   }
 
-  .section-one,
-  .section-two,
-  .section-three,
-  .gallery,
-  .contact {
-    padding: 40px 30px;
-  }
-
   .gallery-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
@@ -699,54 +725,21 @@ button:hover,
   }
 }
 
-/* Tablets (portait) and Common Mobile */
 @media screen and (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
     padding: 20px 25px;
-    background: rgba(255, 255, 255, 0.98);
-    border-bottom: 2px solid #2668db;
-  }
-
-  .hamburger {
-    display: none;
   }
 
   .logo {
     font-size: 28px;
-    background: linear-gradient(135deg, #2668db, #1a4ea8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
   }
 
   ul.nav-links {
-    position: relative;
-    flex-direction: row;
     gap: 20px;
-    background: transparent;
-    width: auto;
-    height: auto;
-    padding: 0;
-    box-shadow: none;
-    justify-content: center;
   }
 
   li.nav-link {
     font-size: 15px;
-  }
-
-  li.nav-link a {
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-
-  li.nav-link a:hover {
-    background: rgba(38, 104, 219, 0.1);
-    color: #2668db;
   }
 
   .main {
@@ -796,7 +789,6 @@ button:hover,
   }
 }
 
-/* Mobile */
 @media screen and (max-width: 480px) {
   .navbar {
     padding: 15px 20px;
