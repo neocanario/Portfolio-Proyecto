@@ -690,8 +690,9 @@ button:hover,
   ul.nav-links { gap: 20px; }
   li.nav-link { font-size: 15px; }
   .main { padding: 100px 30px; }
-  .main h2 { font-size: 36px; }
+  .main h2 { font-size: 36px; color: #1a1a2e; }
   .main p { font-size: 17px; }
+  
 
   button,
   .btn {
