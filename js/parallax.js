@@ -12,13 +12,12 @@ window.addEventListener('scroll', function() {
     // bg.jpg - Permanece estática (no aplicamos transformación)
     // Ya está fija por CSS
     
-    // moon.png - Se mueve a la IZQUIERDA cuando se hace scroll hacia abajo
-    // Usamos un valor negativo para moverla a la izquierda
-    moon.style.left = -scrollValue * 0.5 + 'px';
+    // moon.png - Comienza a la derecha y se mueve a la IZQUIERDA cuando se hace scroll hacia abajo
+    moon.style.right = scrollValue * 0.5 + 'px';
     
-    // mountain.png - Se esconde detrás de road.png cuando scrolleas
-    // Movemos hacia abajo para que desaparezca detrás de road
-    mountain.style.top = scrollValue * 0.3 + 'px';
+    // mountain.png - Se esconde detrás de road.png cuando scrolleas hacia abajo
+    // Movemos hacia arriba para que desaparezca detrás de road
+    mountain.style.top = scrollValue * 0.5 + 'px';
     
     // road.png - Se mantiene en la parte inferior, puede moverse ligeramente
     // Movemos muy poco para dar sensación de profundidad
