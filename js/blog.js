@@ -246,9 +246,9 @@ function showEmptyState() {
  * @returns {string} Escaped text
  */
 function escapeHtml(text) {
-  const div = document.createElement("div");
-  div.textContent = text;
-  return div.innerHTML;
+  const tempElement = document.createElement("div");
+  tempElement.textContent = text;
+  return tempElement.innerHTML;
 }
 
 // ============================================================================
