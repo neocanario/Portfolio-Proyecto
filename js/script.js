@@ -41,6 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (NOMBRE === '') {
                 showError('nombre', 'Por favor, ingresa tu nombre');
                 isValid = false;
+            } else if (NOMBRE.length < 2) {
+                showError('nombre', 'El nombre debe tener al menos 2 caracteres');
+                isValid = false;
+            } else if (NOMBRE.length > 50) {
+                showError('nombre', 'El nombre no puede exceder 50 caracteres');
+                isValid = false;
             }
             
             // Validar email
@@ -59,6 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Validar mensaje
             if (MENSAJE === '') {
                 showError('mensaje', 'Por favor, ingresa un mensaje');
+                isValid = false;
+            } else if (MENSAJE.length < 10) {
+                showError('mensaje', 'El mensaje debe tener al menos 10 caracteres');
+                isValid = false;
+            } else if (MENSAJE.length > 500) {
+                showError('mensaje', 'El mensaje no puede exceder 500 caracteres');
                 isValid = false;
             }
             
