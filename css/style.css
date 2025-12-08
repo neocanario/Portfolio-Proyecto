@@ -16,6 +16,21 @@ body {
 }
 
 /* ============================================================================
+  SCROLL ANIMATIONS
+   ============================================================================ */
+
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================================
   2. MAIN LAYOUT
    ============================================================================ */
 
@@ -148,9 +163,9 @@ li.nav-link a:hover {
   font-size: 48px;
   font-weight: 800;
   margin-bottom: 20px;
-  color: lightgray;
   line-height: 1.2;
   letter-spacing: -1px;
+  min-height: 20px;
 }
 
 .main p {
@@ -159,6 +174,7 @@ li.nav-link a:hover {
   line-height: 1.6;
   margin-bottom: 30px;
   color: lightgray;
+  min-height: 30px;
 }
 
 .availability {
