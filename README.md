@@ -170,7 +170,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Joel Sánchez** - Full Stack Developer
 
-- 🌐 **Portfolio**: [portfolio.joelsanchez.net](https://portfolio.joelsanchez.net/)
 - 💼 **GitHub**: [@neocanario](https://github.com/neocanario)
 - 📸 **Instagram**: [@dgwc.24](https://www.instagram.com/dgwc.24/)
 - 📧 **Email**: joelsanchezdiaz@alumno.ieselricon.es
